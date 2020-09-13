@@ -6,8 +6,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 import time
 import sys
-
-from scipy.spatial import distance as dist
+from math import degrees, asin
 
 if len(sys.argv) > 1:
     arg = sys.argv[1]
@@ -75,7 +74,7 @@ while(True):
             
         #draw the outer circle
         #cv2.circle(img, center, radius, color[, thickness[, lineType[, shift]]])
-        cv2.circle(bordas_color, posicao_centro1, maior_raio,(0,255,0),2)
+        cv2.circle(bordas_color, posicao_centro1, maior_raio,(255,255,0),2)
         cv2.circle(bordas_color, posicao_centro2, segundo_maior_raio,(0,255,0),2)
         # draw the center of the circle
         cv2.circle(bordas_color,posicao_centro1,2,(0,0,255),3)
@@ -86,9 +85,15 @@ while(True):
         deltay = (abs(posicao_centro2[1] - posicao_centro1[1]))
         distancia_centros = (deltax**2 + deltay**2)**(1/2)
 
-        lista_distancias.append(distancia_centros)
+        if distancia_centros >= 20:
+            distancia_real = 14.5*606.896/distancia_centros
+            sin_alfa = deltay/distancia_centros
+            alfa  = degrees(asin(sin_alfa))
+
+        lista_distancias.append(distancia_real)
         if len(lista_distancias) == 6:
             print(np.max(lista_distancias))
+            print("alfa: ", alfa)
             lista_distancias = []
             print('\n')
 

@@ -106,7 +106,7 @@ while(True):
     # cv2.rectangle(bordas_color,(384,0),(510,128),(0,255,0),3)
     # cv2.putText(img, text, org, fontFace, fontScale, color[, thickness[, lineType[, bottomLeftOrigin]]])
     font = cv2.FONT_HERSHEY_SIMPLEX
-    cv2.putText(bordas_color,'Press q to quit',(0,50), font, 1,(255,255,255),2,cv2.LINE_AA)
+    # cv2.putText(bordas_color,'Press q to quit',(0,50), font, 1,(255,255,255),2,cv2.LINE_AA)
 
     #More drawing functions @ http://docs.opencv.org/2.4/modules/core/doc/drawing_functions.html
 

@@ -92,8 +92,9 @@ while(True):
 
         lista_distancias.append(distancia_real)
         if len(lista_distancias) == 6:
-            print(np.max(lista_distancias))
-            print("alfa: ", alfa)
+            dr = (np.max(lista_distancias))
+            print(f'distancia real {dr:.2f} cm')
+            print(f'angulo: {alfa:.2f} °')
             lista_distancias = []
             print('\n')
 
@@ -102,38 +103,7 @@ while(True):
         maior_raio = 2
         segundo_maior_raio = 2
 
-        # contador = 0
-        # for i in circles[0,:]:
-        #     if contador == 0:
-        #         posicao_centro1 = (i[0],i[1])
-
-        #     if contador == 1:
-        #         posicao_centro2 = (i[0],i[1])
-        #         # draw the outer circle
-        #         # cv2.circle(img, center, radius, color[, thickness[, lineType[, shift]]])
-        #         cv2.circle(bordas_color,(i[0],i[1]),i[2],(0,255,0),2)
-        #         # draw the center of the circle
-        #         cv2.circle(bordas_color,(i[0],i[1]),2,(0,0,255),3)
-        #         #linha de centro a centro 
-        #         cv2.line(bordas_color,posicao_centro1,posicao_centro2 ,(255,0,0),5)
-        #         deltax = (posicao_centro2[0] - posicao_centro1[0])
-        #         deltay = (posicao_centro2[1] - posicao_centro1[1])
-        #         distancia_entre_centros = (deltax**2+deltay**2)**(1/2)
-        #         print(distancia_entre_centros, deltax, deltay)
-        #         D = dist.euclidean((posicao_centro1[0], posicao_centro2[0]), (posicao_centro1[1], posicao_centro1[1]))
-        #         print("D: ",D)
-
-        #         contador = 0
-        #     contador = 1
-
-    # Draw a diagonal blue line with thickness of 5 px
-    # cv2.line(img, pt1, pt2, color[, thickness[, lineType[, shift]]])
-    # cv2.line(bordas_color,(0,0),(511,511),(255,0,0),5)
-    # cv2.line(bordas_color,(0,0),(511,511),(255,0,0),5)
-
-    # cv2.rectangle(img, pt1, pt2, color[, thickness[, lineType[, shift]]])
-    cv2.rectangle(bordas_color,(384,0),(510,128),(0,255,0),3)
-
+    # cv2.rectangle(bordas_color,(384,0),(510,128),(0,255,0),3)
     # cv2.putText(img, text, org, fontFace, fontScale, color[, thickness[, lineType[, bottomLeftOrigin]]])
     font = cv2.FONT_HERSHEY_SIMPLEX
     cv2.putText(bordas_color,'Press q to quit',(0,50), font, 1,(255,255,255),2,cv2.LINE_AA)

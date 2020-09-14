@@ -45,7 +45,6 @@ if __name__ == "__main__":
         input_source = 0
 
 
-
     cap = cv2.VideoCapture(input_source)
 
     original_rgb = cv2.imread("insper_logo2.jpeg")  # Imagem a procurar

@@ -11,7 +11,7 @@ brisk = cv2.BRISK_create()
 bf = cv2.BFMatcher(cv2.NORM_HAMMING)
 
 # Define o mínimo de pontos similares
-MINIMO_SEMELHANCAS = 20
+MINIMO_SEMELHANCAS = 15
 
 
 def find_good_matches(descriptor_image1, frame_gray):
@@ -27,7 +27,7 @@ def find_good_matches(descriptor_image1, frame_gray):
     # store all the good matches as per Lowe's ratio test.
     good = []
     for m,n in matches:
-        if m.distance < 0.765*n.distance:
+        if m.distance < 0.75*n.distance:
             good.append(m)
 
     return kp2, good

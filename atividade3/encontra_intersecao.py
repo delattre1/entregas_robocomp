@@ -79,11 +79,12 @@ def line_intersect(m1, b1, m2, b2):
     y = m1 * x + b1
     return x,y
 
-m1 = slope(p1,p2)
-m2 = slope(q1,q2)
-yint_a = y_intercept(p1, m1)
-yint_b = y_intercept(q1,m2)
-print(line_intersect(m1, yint_a, m2, yint_b))
+# m1 = slope(p1,p2)
+# m2 = slope(q1,q2)
+# yint_a = y_intercept(p1, m1)
+# yint_b = y_intercept(q1,m2)
+# print(line_intersect(m1, yint_a, m2, yint_b))
+
 # A1 = [1,1]
 # A2 = [3,3]
 # B1 = [1,3]
@@ -93,3 +94,12 @@ print(line_intersect(m1, yint_a, m2, yint_b))
 # y_int_A = y_intercept(A1, slope_A)
 # y_int_B = y_intercept(B1, slope_B)
 # print(line_intersect(slope_A, y_int_A, slope_B, y_int_B))
+
+# def calcula_intersecao1(p1,p2):
+#     m = (p2[1] - p1[1]) / (p2[0] - p1[0])
+#     y_intercept = p1[1] - m*p1[0] #y0-mx0
+#     return m,y_intercept
+
+# m1,yint1 = calcula_intersecao1(p1,p2)
+
+# def calcula_intersecao2(m1,yint1, m2, yint2)

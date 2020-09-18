@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-
+from roda_video import 
 import cv2
 import numpy as np
 import sys

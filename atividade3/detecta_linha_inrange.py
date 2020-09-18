@@ -3,18 +3,9 @@ import cv2
 import numpy as np
 import sys
 import math
+from encontra_intersecao import slope, y_intercept, line_intersect
 
 cap = cv2.VideoCapture('testevideo1.mp4')
-# hsv1, hsv2 = aux.ranges('#fffbf6')
-# print(hsv1, hsv2)
-# print(hsv1[0])
-# hsv1[0] = 0
-# hsv1[1] = 0
-# hsv1[2] = 0
-# hsv2[0] = 0
-# hsv2[1] = 0
-# hsv2[2] = 255
-
 sensitivity = 15
 lower_white = np.array([0, 0, 255-sensitivity])
 upper_white = np.array([255, sensitivity, 255])
@@ -57,17 +48,27 @@ while(True):
         #print(f'coef ang :{m}')
         # cv2.waitKey(0)
         #cv2.line(cdst, (l[0], l[1]), (l[2], l[3]), (255, 0, 0), 3, cv2.LINE_AA)
-    print(f'menor: {menor_m} maior: {maior_m}')
+    # print(f'menor: {menor_m} maior: {maior_m}')
     cv2.line(cdst, (l_maior[0], l_maior[1]), (l_maior[2],
                                               l_maior[3]), (255, 0, 255), 3, cv2.LINE_AA)
 
     cv2.line(cdst, (l_menor[0], l_menor[1]), (l_menor[2],
                                               l_menor[3]), (25, 240, 255), 3, cv2.LINE_AA)
 
+    p1, p2 = (l_maior[0],l_maior[1]),(l_maior[2],l_maior[3])
+    q1, q2 = (l_menor[0],l_menor[1]),(l_menor[2],l_menor[3])
+    m1 = slope(p1,p2)
+    m2 = slope(q1,q2)
+    yint_a = y_intercept(p1, m1)
+    yint_b = y_intercept(q1,m2)
+    ponto_de_fuga =  (line_intersect(m1, yint_a, m2, yint_b))
+    x_fuga = int(ponto_de_fuga[0])
+    y_fuga = int(ponto_de_fuga[1])
+    cv2.circle(cdst, (x_fuga,y_fuga), 2, (0,0,255), 5)
     maior_m, menor_m = 0, 0
     # display
     cv2.imshow("frame", cdst)
-    cv2.imshow("ajja",frame)
+    # cv2.imshow("ajja",frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break

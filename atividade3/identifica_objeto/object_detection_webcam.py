@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-
 # Para RODAR
 # python object_detection_webcam.py --prototxt MobileNetSSD_deploy.prototxt.txt --model MobileNetSSD_deploy.caffemodel
 # Credits: https://www.pyimagesearch.com/2017/09/11/object-detection-with-deep-learning-and-opencv/
@@ -40,7 +39,6 @@ net = cv2.dnn.readNetFromCaffe(args["prototxt"], args["model"])
 # (note: normalization is done via the authors of the MobileNet SSD
 # implementation)
 
-
 def detect(frame):
     image = frame.copy()
     (h, w) = image.shape[:2]
@@ -62,7 +60,6 @@ def detect(frame):
 
         # filter out weak detections by ensuring the `confidence` is
         # greater than the minimum confidence
-
 
         if confidence > args["confidence"]:
             # extract the index of the class label from the `detections`,
@@ -86,13 +83,6 @@ def detect(frame):
     # show the output image
     return image, results
 
-
-
-
-
-
-import cv2
-
 #cap = cv2.VideoCapture('hall_box_battery_1024.mp4')
 cap = cv2.VideoCapture(0)
 
@@ -104,7 +94,6 @@ while(True):
     ret, frame = cap.read()
     
     result_frame, result_tuples = detect(frame)
-
 
     # Display the resulting frame
     cv2.imshow('frame',result_frame)

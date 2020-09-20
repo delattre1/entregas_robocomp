@@ -27,8 +27,9 @@ COLORS = np.random.uniform(0, 255, size=(len(CLASSES), 3))
 # load our serialized model from disk
 print("[INFO] loading model...")
 net = cv2.dnn.readNetFromCaffe(args["prototxt"], args["model"])
+contador = 0 #vai até 5 para desenhar o retangulo
 
-def detect(frame):
+def detect(frame, contador):
     image = frame.copy()
     (h, w) = image.shape[:2]
     blob = cv2.dnn.blobFromImage(cv2.resize(image, (300, 300)), 0.007843, (300, 300), 127.5)
@@ -52,18 +53,24 @@ def detect(frame):
             # display the prediction
             label = "{}: {:.2f}%".format(CLASSES[idx], confidence * 100)
             # print("[INFO] {}".format(label))
-            if CLASSES[idx] == "bottle":
+            if CLASSES[idx] == "person":
+                contador += 1
+                print(f'Contador frame: {contador}')
+
+            else:
+                contador = 0
+                print("\n")
+
+            if contador >= 5:
                 cv2.rectangle(image, (startX, startY), (endX, endY),
                     COLORS[idx], 2)
                 y = startY - 15 if startY - 15 > 15 else startY + 15
                 cv2.putText(image, label, (startX, y),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[idx], 2)
 
-
-            results.append((CLASSES[idx], confidence*100, (startX, startY),(endX, endY) ))
-
+                results.append((CLASSES[idx], confidence*100, (startX, startY),(endX, endY) ))
     # show the output image
-    return image, results
+    return image, results, contador
 
 
     #cap = cv2.VideoCapture('hall_box_battery_1024.mp4')
@@ -75,7 +82,7 @@ cap = cv2.VideoCapture(0)
 while(True):
     # Capture frame-by-frame
     ret, frame = cap.read()
-    result_frame, result_tuples = detect(frame)
+    result_frame, result_tuples, contador = detect(frame, contador)
     # Display the resulting frame
     cv2.imshow('frame',result_frame)
 

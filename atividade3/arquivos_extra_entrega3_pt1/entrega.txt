@@ -1,11 +1,10 @@
-
-://youtu.be/iTze4BNdo6sntrega atividade 3:
+Entrega atividade 3:
 
 Diretório com arquivos atividade 3: https://github.com/delattre1/entregas_robocomp/tree/master/atividade3
 
 1: Link: Detecção ponto de fuga https://youtu.be/iTze4BNdo6s
 
-3: Link: Identifica objeto https://youtu.be/VncyKmaY_1E
+3: Link: Identifica objeto https://youtu.be/VncyKmaY_1E - objeto escolhido - PERSON
 
 4: Comandos 
 

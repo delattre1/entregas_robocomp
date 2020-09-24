@@ -1,7 +1,5 @@
-Membros: Daniel Delattre e Guilherme Carvalho
 
-
-Entrega atividade 3:
+://youtu.be/iTze4BNdo6sntrega atividade 3:
 
 Diretório com arquivos atividade 3: https://github.com/delattre1/entregas_robocomp/tree/master/atividade3
 
@@ -18,15 +16,3 @@ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 VISTA COM SENSOR (rviz):
 
 roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
-
-
-
-Entrega atividade 2: 
-
-Identifica logo: https://youtu.be/DvOH-KLGL9Y
-
-Distancia e Angulo: https://www.youtube.com/watch?v=znuPVNqZFIo&feature=youtu.be
-
-Reconhecimento dos circulos por inrange: https://www.youtube.com/watch?v=D0lL-_qRQAw
-
-

@@ -64,7 +64,7 @@ while(True):
     ponto_de_fuga =  (line_intersect(m1, yint_a, m2, yint_b))
     x_fuga = int(ponto_de_fuga[0])
     y_fuga = int(ponto_de_fuga[1])
-    cv2.circle(cdst, (x_fuga,y_fuga), 2, (0,0,255), 5)
+    cv2.circle(cdst, (x_fuga,y_fuga), 2, (0,0,255), 10)
     maior_m, menor_m = 0, 0
     # display
     cv2.imshow("frame", cdst)

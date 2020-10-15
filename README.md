@@ -4,7 +4,7 @@ Entrega atividade 3 - 5 e 6:
 
 Arquivos: https://github.com/delattre1/entregas_robocomp/tree/master/atividade3/exercicios_5_e_6
 
-https://youtu.be/UgeTgy0G34c - Robo indeciso.
+https://www.youtube.com/watch?v=zvM53p-0dRw - Robo indeciso.
 
 https://youtu.be/Em2Wh3YiORA - Robo que faz tipo um quadrado. 
 

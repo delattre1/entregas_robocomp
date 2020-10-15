@@ -1,7 +1,14 @@
 Membros: Daniel Delattre e Guilherme Carvalho
 
+Entrega atividade 3 - 5 e 6:
 
-Entrega atividade 3:
+https://youtu.be/UgeTgy0G34c - Robo indeciso.
+
+https://youtu.be/Em2Wh3YiORA - Robo que faz tipo um quadrado. 
+
+###################################################################################################
+
+Entrega atividade 3 - 1 ao 4:
 
 Diretório com arquivos atividade 3: https://github.com/delattre1/entregas_robocomp/tree/master/atividade3
 
@@ -19,6 +26,8 @@ VISTA COM SENSOR (rviz):
 
 roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
 
+
+####################################################################################################
 
 
 Entrega atividade 2: 

@@ -17,7 +17,7 @@ def scaneou(dado):
 
 	if distancia < 1.0:
 		andar_pra_frente = False
-	elif distancia >= 1.2:
+	elif distancia >= 1.02:
 		andar_pra_frente = True
 
 if __name__=="__main__":

@@ -2,8 +2,9 @@ Membros: Daniel Delattre e Guilherme Carvalho
 
 Entrega atividade 4:
 
+Arquivos: https://github.com/delattre1/entregas_robocomp/tree/master/atividade4
 
-https://youtu.be/YAirRPcFlsYhome/borg/catkin_ws/src/meu_projeto/scripts
+Video at4 creeper: https://youtu.be/YAirRPcFlsY
 
 
 ###################################################################################

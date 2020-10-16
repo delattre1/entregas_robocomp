@@ -1,5 +1,14 @@
 Membros: Daniel Delattre e Guilherme Carvalho
 
+Entrega atividade 4:
+
+
+https://youtu.be/YAirRPcFlsYhome/borg/catkin_ws/src/meu_projeto/scripts
+
+
+###################################################################################
+
+
 Entrega atividade 3 - 5 e 6:
 
 Arquivos: https://github.com/delattre1/entregas_robocomp/tree/master/atividade3/exercicios_5_e_6
